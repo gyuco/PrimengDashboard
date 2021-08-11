@@ -1,0 +1,21 @@
+<header>
+    <h2>
+        <label for="nav-toggle">
+            <span class="pi pi-bars"></span>
+        </label>
+
+    </h2>
+
+    <div class="user-wrapper">
+
+        <p-avatar image="/assets/images/Avatar.png" styleClass="p-mr-2" size="large" (click)="avatarMenu.toggle($event)"></p-avatar>
+
+        <div>
+            <h4>Administrador</h4>
+            <small>Super Admin</small>
+            <p-tieredMenu #avatarMenu appendTo="body" [model]="items" [popup]="true"></p-tieredMenu>
+
+        </div>
+    </div>
+
+</header>

@@ -1,0 +1,38 @@
+
+<div class="login-body">
+
+    <p-card header="Login" [style]="{width: '360px'}" styleClass="p-card-shadow">
+        <ng-template pTemplate="header">
+            <img alt="Card" src="/assets/images/usercard.png">
+        </ng-template>
+ 
+        <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+
+            <div class="p-grid p-fluid">
+                <div class="ui-grid-row">
+                    <div class="p-inputgroup">
+                        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <input formControlName="email" type="text" pInputText placeholder="Username">         
+                    </div>
+                </div>
+<br>
+                <div class="ui-grid-row">
+                    
+                    <div class="p-inputgroup">
+                        <span class="p-inputgroup-addon"><i class="pi pi-circle-on"></i></span>
+                        <input formControlName="password" type="password" pInputText placeholder="Password">         
+                    </div>
+                </div>
+<br>
+                <div class="uid-grid-row">
+                    <button pButton type="submit" label="Login" [disabled]="!loginForm.valid"></button>
+                        
+                </div>
+            </div>
+                
+        </form>
+
+    </p-card>
+
+
+</div> 
